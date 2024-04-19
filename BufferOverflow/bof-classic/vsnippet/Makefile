@@ -1,0 +1,1 @@
+gcc -o test.o -c 23-bof-classic.c
