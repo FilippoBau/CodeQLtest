@@ -13,8 +13,8 @@ all: $(TARGETS)
 
 # Regola generica per la compilazione dei file sorgente in eseguibili
 $(TARGETS): % : %.c
-    $(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $<
 
 # Regola per la pulizia dei file generati
 clean:
-    rm -f $(TARGETS)
+	rm -f $(TARGETS)
