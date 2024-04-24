@@ -1,19 +1,24 @@
 const fs = require('fs');
 const yaml = require('js-yaml');
 
+// Carica il file YAML che contiene il segreto
+const yamlFile = fs.readFileSync('config.yaml', 'utf8');
+const secrets = yaml.safeLoad(yamlFile);
 
-try {
-    const fileContents = fs.readFileSync('config.yaml', 'utf8');
-    const data = yaml.safeLoad(fileContents);
+// Funzione per l'autenticazione utilizzando il segreto
+function authenticate(secret) {
+    // Simuliamo un'operazione di autenticazione confrontando il segreto
+    if (secret === secrets.apiKey) {
+        return true; // Autenticazione riuscita
+    } else {
+        return false; // Autenticazione fallita
+    }
+}
 
-
-    const secret = data.secret;
-
-
-    console.log('Il secret estratto dal file YAML è:', secret);
-
-
-
-} catch (e) {
-    console.log('Si è verificato un errore durante la lettura del file YAML:', e);
+// Utilizzo della funzione di autenticazione
+const userProvidedSecret = 'ilsegretoqui'; // Da sostituire con il segreto fornito dall'utente
+if (authenticate(userProvidedSecret)) {
+    console.log('Accesso consentito!');
+} else {
+    console.log('Accesso negato!');
 }
