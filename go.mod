@@ -8,7 +8,6 @@ require (
 	github.com/go-echarts/go-echarts/v2 v2.4.1
 	github.com/go-git/go-git/v5 v5.12.0
 	github.com/google/go-github/v64 v64.0.0
-	github.com/rancher/rancher v2.8.1
 )
 
 require (
