@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3@sha256:653b0cf8fc50366277a21657209ddd54edd125499d20f3520c6b277eb8c828d3
 
 #Install and update system dependencies
 RUN apt update -y; apt install -y supervisor
