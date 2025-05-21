@@ -15,7 +15,7 @@ services:
         container_name: vsnippet-db-mysql-sqli-login-20
         volumes:
             - ./config/mysql.sql:/docker-entrypoint-initdb.d/mysql.sql
-        image: mysql
+        image: mysql@sha256:2247f6d47a59e5fa30a27ddc2e183a3e6b05bc045e3d12f8d429532647f61358
         environment:
             MYSQL_DATABASE: ywhvsnippet
             MYSQL_USER: vsnippet

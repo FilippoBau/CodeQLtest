@@ -1,4 +1,4 @@
-FROM ruby:3
+FROM ruby:3@sha256:370e6be29a1cecbf44993087d2750e7d9e1570fde5b97c74325063b1750d11d0
 
 #Install and update system dependencies
 RUN apt update -y; apt install -y supervisor
