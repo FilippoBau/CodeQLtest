@@ -6,7 +6,7 @@ require (
 	github.com/aws/aws-lambda-go v1.47.0
 	github.com/aws/aws-sdk-go v1.55.5
 	github.com/go-echarts/go-echarts/v2 v2.4.1
-	github.com/go-git/go-git/v5 v5.12.0
+	github.com/go-git/go-git/v5 v5.13.0
 	github.com/google/go-github/v64 v64.0.0
 )
 
